@@ -9,6 +9,11 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src/**'],
+      exclude: [
+      'src/**/*.types.ts',          // types purs : rien à exécuter
+      'src/domain/ports/**',        // interfaces : idem
+      'src/ui/main.tsx',            // composition root : assemblage, testé manuellement
+    ],
       // L'infrastructure (adapters réseau) sera couverte par des tests d'intégration séparés,
       // pas par la couverture unitaire du domaine.
     },

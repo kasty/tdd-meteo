@@ -1,5 +1,5 @@
 import { describe } from 'vitest';
-import { InMemoryMeteoRepository } from '../domain/InMemoryFournisseurMeteo';
+import { InMemoryMeteoRepository } from '../../tests/InMemoryFournisseurMeteo';
 import { conseillerTenue } from './conseiller-tenue';
 
 describe('conseillerTenue', () => {

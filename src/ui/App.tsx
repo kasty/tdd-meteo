@@ -1,8 +1,8 @@
-import type { OpenMeteoProvider } from "../infrastructure/OpenMeteoProvider";
+import type { FournisseurMeteo } from "../domain/ports/fournisseur-meteo";
 import FormMeteo from "./components/FormMeteo";
 import BaseLayout from "./components/Layout";
 
-function App({ fournisseur }: { fournisseur: OpenMeteoProvider }) {
+function App({ fournisseur }: { fournisseur: FournisseurMeteo }) {
 
   return (
     <BaseLayout>
