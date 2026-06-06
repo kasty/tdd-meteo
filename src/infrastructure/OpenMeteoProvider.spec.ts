@@ -13,7 +13,7 @@ describe('OpenMeteoProvider', () => {
   it('lance une erreur si le réseau échoue', async () => {
     mockFetch.mockRejectedValueOnce(new Error('network down'));   // ← rejette, pas resolve
     const repo = new OpenMeteoProvider(fakeUrl);
-     expect(repo.getCurrentMeteo({ latitude: 0, longitude: 0 })).rejects.toBeInstanceOf(MeteoIndisponibleError);
+    await expect(repo.getCurrentMeteo({ latitude: 0, longitude: 0 })).rejects.toBeInstanceOf(MeteoIndisponibleError);
   });
 
   it('interroage l’API avec les bonnes coordonnées', async () => {
